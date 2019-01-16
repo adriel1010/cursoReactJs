@@ -5,8 +5,22 @@ import Footer from './components/footer'
 import Home from './components/home'
 import NovoAnuncio from './components/novo-anuncio'
 import { BrowserRouter as Router , Route, Switch } from 'react-router-dom'
+import base from './banco/base'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state={
+      categorias: []
+    }
+
+    base.bindToState('categorias', {
+      context: this,
+      state: 'categorias',
+    });
+
+  }
 
 
   render() {
@@ -15,8 +29,8 @@ class App extends Component {
       <div className="App">
 
         <div>
-          <Route path='/' exact component={Home} />
-          <Route path='/novo-anuncio' exact component={NovoAnuncio} />
+          <Route path='/' exact render={() => <Home categorias={this.state.categorias} />} />
+          <Route path='/novo-anuncio' exact render={ () => <NovoAnuncio categorias={this.state.categorias}/> } />
 
        </div>
 

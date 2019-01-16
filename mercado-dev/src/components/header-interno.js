@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo2 from '../logo2.png';
 
 const HeaderInterno = (props) => {
-parei em 18 min
+
   return (
     <nav className="navbar navbar-dark fixed-top bg-dark">
       <div className="container">

@@ -11,14 +11,10 @@ class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-      categorias: [],
       anuncios: []
     }
 
-    base.bindToState('categorias', {
-      context: this,
-      state: 'categorias',
-    });
+
 
     base.bindToState('anuncios', {
       context: this,
@@ -40,11 +36,12 @@ class Home extends Component {
       <div className="row">
 
       {
-        this.state.anuncios.map( (anun, indice) => {
+        Object.keys(this.state.anuncios).map( key => {
+          const anuncio = this.state.anuncios[key]
           return  [
 
-            <AnuncioHome anuncio={anun}/>,
-            ++index%4 === 0 && <div key={'c'+indice} className="w-100"></div>
+            <AnuncioHome anuncio={anuncio}/>,
+            ++index%4 === 0 && <div key={key} className="w-100"></div>
           ]
         })
       }
@@ -53,7 +50,7 @@ class Home extends Component {
       <h3>Categorias</h3>
       <div className="row">
       {
-        this.state.categorias.map( (cat, indice) => {
+        this.props.categorias.map( (cat, indice) => {
           return  [
             <Categoria categoria={cat} />,
             ++index%4 === 0 && <div key={'c'+indice} className="w-100"></div>
