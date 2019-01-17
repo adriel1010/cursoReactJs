@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const AnuncioHome = (props) => {
 
   return (
   <div className="col-lg-4 col-md-6 mb-4">
   <div className="card h-100">
-    <a href="#"><img className="card-img-top" src={props.anuncio.foto} alt="foto" /></a>
+    <Link to={`/categorias/${this.props.anuncio.categoria}/${this.props.id}`}><img className="card-img-top" src={props.anuncio.foto} alt="foto" /></a>
     <div className="card-body">
       <h4 className="card-title">
         <a to={`/anuncios/ver/`}>{props.anuncio.nome}</a>

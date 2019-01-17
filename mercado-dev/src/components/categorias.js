@@ -1,9 +1,10 @@
 import React from 'react'
 import HeaderInterno from '../components/header-interno'
 import { Link , Route} from 'react-router-dom'
-import CategoriaInterna from '../components/categoria-interna'
+import Categoria from '../components/categoria-interna'
+import Anuncio from './anuncio'
 // se precisamos manter um estado interno do componente, através do state
-// usa uma classe, 
+// usa uma classe,
 // caso ele não precisa, usa ele só passando as props, os componetes, usa como const mesmo
 
 const Categorias = (props) => {
@@ -22,7 +23,7 @@ const Categorias = (props) => {
               props.categorias.map(
                 cat => {
                   return (
-                  <li>  <Link to={`/categorias/${cat.url}`}>{cat.categoria}</Link> </li>
+                  <li key={cat.url} >  <Link to={`/categorias/${cat.url}`}>{cat.categoria}</Link> </li>
                   )
                 }
               )
@@ -30,8 +31,9 @@ const Categorias = (props) => {
             </ul>
           </div>
           <div className='col-lg-8'>
-            <Route path='/categorias/:urlCategoria' component={CategoriaInterna} />
-          
+            <Route path='/categorias/:urlCategoria' exact component={Categoria} />
+            <Route path='/categorias/:urlCategoria/:idAnuncio' render={(props) => <Anuncio {...props} /> } />
+
           </div>
 
       </div>
