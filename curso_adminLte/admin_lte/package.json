@@ -1,0 +1,36 @@
+{
+  "name": "admin_lte",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/loader.js",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject" 
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.7",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.18.9",
+    "pm2": "^3.2.9"
+  }
+}
+
