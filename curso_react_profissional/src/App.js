@@ -4,8 +4,53 @@ import './App.css';
 
 import './index.scss'
 
+class Apps extends Component {
+
+  render(){
+    return (
+    <div className='container'>
+      <NewNote />
+      <NoteList />
+    </div>
+  )
+
+}
+}
+
+const NewNote = () => (
+  <div className='new-note'>
+      <input type="text" className='new-note_input' />
+    </div>
+);
+
+const NoteList = () => (
+    <div className='note-list'>
+      <div className='note'> teste </div>
+      <div className='note'> teste </div>
+      <div className='note'> teste </div>
+
+    </div>
+);
+
 class App extends Component {
 
+
+
+  render() {
+
+    return (
+      <Apps />
+    )
+
+  }
+
+
+
+}
+
+export default App;
+
+/*
 constructor(props){
   super(props);
   this.state = {
@@ -66,6 +111,5 @@ constructor(props){
       </div>
     );
   }
-}
 
-export default App;
+*/

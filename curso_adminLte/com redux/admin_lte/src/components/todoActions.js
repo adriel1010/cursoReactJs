@@ -9,8 +9,9 @@ export const changeDescription = event => ({
 
 //buscar serviço do back 
 
-export const search = () => {
-    const request = axios.get(`${URL}?sort=-createdAt`);
+export const search = (description) => {
+    const seart = description ? `&description_regex=/${description}/` : ''
+    const request = axios.get(`${URL}?sort=-createdAt${seart}`);
     return {
         type: 'TODO_SEARCHED',
         payload: request
