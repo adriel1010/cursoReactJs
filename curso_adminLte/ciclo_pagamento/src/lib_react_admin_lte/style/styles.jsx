@@ -1,23 +1,25 @@
 import './jqueryConfig';
 
 /* eslint-disable */ // Vamos desabilitar porque o jquery tem que vir primeiro
-import 'admin-lte/node_modules/bootstrap/dist/js/bootstrap.min'
+import 'admin-lte/node_modules/bootstrap/dist/js/bootstrap.min.js'
 import 'admin-lte/plugins/jQueryUI/jquery-ui.min'
 //import 'admin-lte/plugins/fastclick/fastclick'
 import 'admin-lte/plugins/slimScroll/jquery.slimscroll.min' 
 import 'admin-lte/plugins/timepicker/bootstrap-timepicker.js'
 import 'admin-lte/plugins/timepicker/bootstrap-timepicker.min.css'
 
-import 'admin-lte/dist/js/adminlte.min'
+import 'admin-lte/dist/js/adminlte.min.js'
 
 import 'font-awesome/css/font-awesome.min.css'
 import 'ionicons/dist/css/ionicons.min.css'
-import 'admin-lte/node_modules/bootstrap/dist/css/bootstrap.css'
+import 'admin-lte/node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'admin-lte/dist/css/AdminLTE.min.css'
 import 'admin-lte/dist/css/skins/_all-skins.min.css'
 import 'admin-lte/plugins/iCheck/flat/blue.css'
- 
-import $ from 'jquery';
+import 'jquery/dist/jquery.min.js';
+
+      
+import $ from 'jquery'
 
 /* eslint-enable */
 
